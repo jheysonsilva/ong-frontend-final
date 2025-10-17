@@ -307,3 +307,27 @@ body.alto-contraste textarea {
   border: 1px solid #fff !important;
 }
 
+/* ==== Ajustes mobile ==== */
+@media (max-width: 768px) {
+  .cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card img {
+    width: 90%;
+    height: auto;
+  }
+
+  form label, form input {
+    display: block;
+    width: 100%;
+  }
+
+  form input {
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+}
+
