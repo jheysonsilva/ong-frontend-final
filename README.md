@@ -1,18 +1,19 @@
-# 🌟 ONG Esperança Viva – Plataforma Web Front-End (Atividade III)
+# 🌟 ONG Esperança Viva – Plataforma Web Front-End (Atividade IV)
 
-[🌐 **Acesse o site atualizado**](https://jheysonsilva.github.io/ong-frontend-interativo/)
+[🌐 **Acesse o site atualizado**](https://jheysonsilva.github.io/ong-frontend-final/)
 
 ---
 
 ## **📖 Sobre o Projeto**
 
-A **ONG Esperança Viva** é uma plataforma web desenvolvida como **Atividade III da disciplina de Desenvolvimento Front-End para Web**, dando continuidade às **Atividades I e II** e introduzindo **recursos interativos e melhorias visuais** no projeto.
+A **ONG Esperança Viva** é uma plataforma web desenvolvida como **Atividade IV da disciplina de Desenvolvimento Front-End para Web**, consolidando todo o aprendizado das etapas anteriores e implementando **melhorias finais de usabilidade, responsividade e acessibilidade**.
 
-Nesta etapa, o foco foi aprimorar:
+Nesta versão, o foco foi:
 
-* A **usabilidade** e **interatividade** do site
-* A **organização do código HTML e CSS**
-* E a **integração de JavaScript** para tornar o menu e outras seções mais dinâmicas.
+* Finalizar a centralização e organização de conteúdos
+* Garantir que **todos os elementos estejam acessíveis**, incluindo o recurso de **auto contraste**
+* Padronizar o **layout dos projetos** e o **tamanho das imagens**
+* Ajustar botões, formulários e textos para uma **experiência de usuário completa**
 
 ---
 
@@ -20,30 +21,30 @@ Nesta etapa, o foco foi aprimorar:
 
 ### **🏠 Página Inicial (`index.html`)**
 
-* Estrutura HTML5 revisada e otimizada
-* Informações institucionais organizadas com semântica aprimorada
-* Design limpo e equilibrado
-* Cores, espaçamentos e fontes definidos via variáveis CSS
-* Menu responsivo com comportamento dinâmico controlado por **JavaScript**
+* Informações institucionais revisadas e **centralizadas**
+* Texto de Missão, Visão e Valores destacado de forma clara, sem listas com marcadores desnecessários
+* Contato organizado com email, telefone e endereço
+* Layout responsivo e harmonioso em todos os dispositivos
 
 ---
 
 ### **📂 Projetos Sociais (`projetos.html`)**
 
-* Cards interativos com transições suaves
-* Exibição dos projetos **Mãos Solidárias** e **Criança Feliz**
-* Seções de voluntariado e doação com novo leiaute responsivo
-* Uso de **CSS Grid** para melhor organização visual
+* Cards de projetos **Mãos Solidárias**, **Criança Feliz** e **Alimente o Futuro** lado a lado e do mesmo tamanho
+* Botão **“Quero ser voluntário”** centralizado
+* Seção de doações com Pix e banco solidário
+* Responsividade completa, mantendo alinhamento e proporção das imagens
+* Recurso de **auto contraste fixo** no canto inferior direito para acessibilidade
 
 ---
 
 ### **📝 Cadastro de Voluntário/Doador (`cadastro.html`)**
 
 * Formulário completo e validado
-* Campos com foco e bordas arredondadas
-* Estrutura centralizada e responsiva
-* Integração com JavaScript para o **menu interativo**
-* Melhor experiência em dispositivos móveis
+* Campos com bordas arredondadas e centralizados
+* Validação de CPF, e-mail e preenchimento obrigatório via JavaScript
+* Armazenamento local do cadastro (`localStorage`) com alertas de sucesso
+* Responsividade e acessibilidade garantidas em dispositivos móveis
 
 ---
 
@@ -57,57 +58,60 @@ Nesta etapa, o foco foi aprimorar:
 ![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-181717?style=flat\&logo=github\&logoColor=white)
 
 * **HTML5 semântico**
-* **CSS3 moderno** (variáveis, Grid e Flexbox)
-* **JavaScript básico** para interatividade
+* **CSS3 moderno** (Flexbox, Grid, variáveis e centralização)
+* **JavaScript** para interatividade e validação
 * **Responsividade total**
+* **Acessibilidade** com recurso de auto contraste
 * **Git e GitHub Pages** para versionamento e publicação
 
 ---
 
-## **🎨 Destaques da Versão III**
+## **🎨 Destaques da Versão IV**
 
-* Sistema de cores e fontes padronizado
-* Layout responsivo em **grid e flexbox**
-* Menu hambúrguer dinâmico com JavaScript
-* Cards interativos e animações sutis
-* Formulário estilizado e acessível
+* Centralização de todos os textos importantes
+* Cards de projetos do mesmo tamanho e alinhados
+* Botão de voluntariado centralizado
+* Layout responsivo em grid e flexbox
+* Formulário validado e interativo
+* Barra de **auto contraste** funcional
+* Correção de bugs e ajustes visuais finais
 
 ---
 
 ## **📂 Estrutura do Repositório**
 
 ```
-ong-frontend-interativo/
+ong-frontend-final/
 │
 ├─ index.html          # Página inicial
 ├─ projetos.html       # Projetos sociais e doações
 ├─ cadastro.html       # Cadastro de voluntários/doadores
 │
 ├─ css/
-│   └─ style.css       # Arquivo de estilos principal (Atividade III)
+│   └─ style.css       # Arquivo de estilos principal (Atividade IV)
 │
-├─ js/                   # Scripts JavaScript
+├─ js/                  # Scripts JavaScript
 │   ├─ menu.js           # Menu responsivo
 │   ├─ validacaoForm.js  # Validação do formulário
 │   └─ renderProjetos.js # Renderização dinâmica de projetos
 │
-├─ img/                # Imagens da ONG
+├─ img/                 # Imagens da ONG
 │   ├─ crianca-feliz.jpg
 │   ├─ maos-solidarias.jpg
 │   └─ ong-fachada.jpg
 │
-└─ README.md           # Documentação do projeto
+└─ README.md            # Documentação do projeto
 ```
 
 ---
 
-## **🎯 Objetivos da Atividade III**
+## **🎯 Objetivos da Atividade IV**
 
-* Integrar **JavaScript** para interatividade
-* Consolidar o aprendizado em **HTML e CSS**
-* Criar uma **experiência de navegação fluida e moderna**
-* Aplicar **boas práticas de responsividade e design**
-* Publicar o site aprimorado no **GitHub Pages**
+* Centralizar conteúdos e melhorar layout
+* Garantir acessibilidade total com auto contraste
+* Padronizar imagens e botões
+* Consolidar responsividade e boas práticas de front-end
+* Publicar site final no GitHub Pages como **portfólio completo**
 
 ---
 
@@ -122,6 +126,9 @@ ong-frontend-interativo/
 ⚙️ **Atividade III – Versão Interativa (HTML + CSS + JS):**
 👉 [https://jheysonsilva.github.io/ong-frontend-interativo/](https://jheysonsilva.github.io/ong-frontend-interativo/)
 
+🌟 **Atividade IV – Versão Final (HTML + CSS + JS + Acessibilidade):**
+👉 [https://jheysonsilva.github.io/ong-frontend-final/](https://jheysonsilva.github.io/ong-frontend-final/)
+
 ---
 
 ## **👨‍💻 Autor**
@@ -129,5 +136,4 @@ ong-frontend-interativo/
 **Jheyson Silva**
 Desenvolvedor Back-End & Front-End em formação
 📚 Curso: *Análise e Desenvolvimento de Sistemas*
-🏫 Atividade III — *Desenvolvimento Front-End para Web (HTML, CSS e JS)*
-
+🏫 Atividade IV — *Desenvolvimento Front-End para Web (HTML, CSS e JS)*
