@@ -1,4 +1,3 @@
-// renderProjetos.js - renderiza os cards de projetos dinamicamente
 document.addEventListener('DOMContentLoaded', () => {
   const container = document.querySelector('.cards');
   if (!container) return;
