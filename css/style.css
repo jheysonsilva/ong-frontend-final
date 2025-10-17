@@ -223,7 +223,7 @@ body.alto-contraste form {
   .card img { 
     width: 90%; 
     height: auto; 
-    /* CORREÇÃO: Adicionar margem auto para centralizar a imagem do projeto no mobile */
+    /* CORREÇÃO: Centraliza a imagem do projeto no mobile */
     margin: 0.5rem auto; 
   }
   form label, form input { width: 100%; }
