@@ -208,6 +208,12 @@ legend {
   color: #005f73;
 }
 
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
 label {
   font-weight: 600;
   text-align: left;
@@ -282,32 +288,25 @@ body.alto-contraste footer {
   color: #fff;
 }
 
+body.alto-contraste main,
+body.alto-contraste section,
+body.alto-contraste form,
+body.alto-contraste fieldset {
+  background-color: #000;
+  color: #fff;
+  border-color: #fff;
+}
+
 body.alto-contraste a,
-body.alto-contraste button {
+body.alto-contraste button,
+body.alto-contraste input {
   background-color: #fff;
   color: #000;
   border: 2px solid #fff;
 }
 
-body.alto-contraste main,
-body.alto-contraste section,
-body.alto-contraste form,
-body.alto-contraste fieldset,
-body.alto-contraste .card {
-  background-color: #000 !important;
-  color: #fff !important;
-  border-color: #fff !important;
-}
-
-body.alto-contraste input,
-body.alto-contraste textarea {
-  background-color: #000 !important;
-  color: #fff !important;
-  border: 2px solid #fff !important;
-}
-
 body.alto-contraste h2 {
-  color: #ffd166 !important;
+  color: #ffd166;
 }
 
 /* ======= Responsividade ======= */
