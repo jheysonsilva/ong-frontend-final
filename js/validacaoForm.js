@@ -5,11 +5,11 @@ document.addEventListener('DOMContentLoaded', () => {
   form.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const nome = document.getElementById('nome')?.value.trim();
-    const email = document.getElementById('email')?.value.trim();
-    const cpf = document.getElementById('cpf')?.value.trim();
-    const telefone = document.getElementById('telefone')?.value.trim();
-    const cidade = document.getElementById('cidade')?.value.trim();
+    const nome = document.getElementById('nome').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const cpf = document.getElementById('cpf').value.trim();
+    const telefone = document.getElementById('telefone').value.trim();
+    const cidade = document.getElementById('cidade').value.trim();
 
     if (!nome || !email || !cpf || !telefone || !cidade) {
       alert('⚠️ Preencha todos os campos obrigatórios!');
@@ -26,16 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    const usuario = {
-      nome,
-      email,
-      cpf,
-      telefone,
-      cidade,
-      criadoEm: new Date().toISOString()
-    };
-
-    localStorage.setItem('usuarioCadastro', JSON.stringify(usuario));
+    localStorage.setItem('usuarioCadastro', JSON.stringify({ nome, email, cpf, telefone, cidade, criadoEm: new Date().toISOString() }));
 
     alert('✅ Cadastro realizado com sucesso!');
     form.reset();
