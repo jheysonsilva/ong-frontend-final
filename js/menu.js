@@ -1,15 +1,25 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const btnMenu = document.querySelector('.menu-btn');
-    const navMenu = document.querySelector('nav ul');
-    if (btnMenu && navMenu) {
-        btnMenu.addEventListener('click', () => {
-            navMenu.classList.toggle('mostrar');
-        });
-        btnMenu.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                navMenu.classList.toggle('mostrar');
-            }
-        });
-    }
+// menu.js - controle do menu responsivo
+
+document.addEventListener("DOMContentLoaded", () => {
+  const menuBtn = document.querySelector(".menu-btn");
+  const nav = document.querySelector("nav ul");
+
+  if (!menuBtn || !nav) return;
+
+  menuBtn.addEventListener("click", () => {
+    nav.classList.toggle("ativo");
+    const aberto = nav.classList.contains("ativo");
+    menuBtn.setAttribute("aria-expanded", aberto);
+  });
+
+  // Fechar menu ao clicar em um link (modo mobile)
+  const links = nav.querySelectorAll("a");
+  links.forEach(link => {
+    link.addEventListener("click", () => {
+      if (nav.classList.contains("ativo")) {
+        nav.classList.remove("ativo");
+        menuBtn.setAttribute("aria-expanded", "false");
+      }
+    });
+  });
 });
