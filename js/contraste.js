@@ -1,12 +1,14 @@
+// contraste.js
 document.addEventListener('DOMContentLoaded', () => {
-  const btnContraste = document.getElementById('toggle-contraste');
+  const btn = document.querySelector('.contraste-btn');
 
-  // Mantém o modo salvo
+  // Ativa contraste se já estiver salvo
   if (localStorage.getItem('altoContraste') === 'true') {
     document.body.classList.add('alto-contraste');
   }
 
-  btnContraste.addEventListener('click', () => {
+  // Alterna contraste ao clicar
+  btn.addEventListener('click', () => {
     document.body.classList.toggle('alto-contraste');
     const ativo = document.body.classList.contains('alto-contraste');
     localStorage.setItem('altoContraste', ativo ? 'true' : 'false');
