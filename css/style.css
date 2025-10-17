@@ -201,36 +201,60 @@ footer {
   font-size: 0.9rem;
 }
 
-/* ======= Barra Auto Contraste ======= */
-#accessibility-bar {
+/* ======= Botão de Alto Contraste ======= */
+.contraste-btn {
   position: fixed;
-  bottom: 10px;
+  top: 10px;
   right: 10px;
-  background-color: #000;
-  color: #fff;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  z-index: 9999;
-}
-
-#accessibility-bar button {
-  background: none;
-  color: #fff;
+  padding: 8px 12px;
+  background-color: #333;
+  color: white;
   border: none;
+  border-radius: 6px;
   cursor: pointer;
-  font-weight: bold;
+  z-index: 1000;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
 }
 
-/* ======= Alto Contraste ======= */
-body.high-contrast {
+.contraste-btn:hover {
+  background-color: #555;
+}
+
+/* ======= Modo de Alto Contraste ======= */
+body.alto-contraste {
   background-color: #000 !important;
   color: #fff !important;
 }
 
-body.high-contrast a,
-body.high-contrast button {
-  background-color: #fff !important;
-  color: #000 !important;
+body.alto-contraste a {
+  color: yellow !important;
+}
+
+body.alto-contraste header,
+body.alto-contraste footer,
+body.alto-contraste section,
+body.alto-contraste main,
+body.alto-contraste div,
+body.alto-contraste p,
+body.alto-contraste h1,
+body.alto-contraste h2,
+body.alto-contraste h3,
+body.alto-contraste .card,
+body.alto-contraste form {
+  background-color: #000 !important;
+  color: #fff !important;
+  border-color: #fff !important;
+}
+
+/* ======= Inputs e botões em contraste ======= */
+body.alto-contraste button,
+body.alto-contraste input,
+body.alto-contraste select,
+body.alto-contraste textarea {
+  background-color: #111 !important;
+  color: #fff !important;
+  border: 1px solid #fff !important;
 }
 
 /* ======= Responsividade ======= */
@@ -251,70 +275,6 @@ body.high-contrast button {
   .cards {
     flex-direction: column;
     gap: 1rem;
-  }
-}
-
-/* ======= BOTÃO DE ALTO CONTRASTE ======= */
-.contraste-btn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #000;
-  color: #fff;
-  border: none;
-  padding: 10px 18px;
-  border-radius: 8px;
-  font-size: 14px;
-  cursor: pointer;
-  box-shadow: 0px 2px 5px rgba(0,0,0,0.3);
-  transition: all 0.3s ease;
-  z-index: 1000;
-}
-
-.contraste-btn:hover {
-  background-color: #333;
-}
-
-/* ======= MODO DE ALTO CONTRASTE ======= */
-body.alto-contraste {
-  background-color: #000 !important;
-  color: #fff !important;
-}
-
-body.alto-contraste header,
-body.alto-contraste footer,
-body.alto-contraste section,
-body.alto-contraste main,
-body.alto-contraste div,
-body.alto-contraste p,
-body.alto-contraste h1,
-body.alto-contraste h2,
-body.alto-contraste h3,
-body.alto-contraste .card,
-body.alto-contraste form {
-  background-color: #000 !important;
-  color: #fff !important;
-  border-color: #fff !important;
-}
-
-body.alto-contraste a {
-  color: #00ffff !important;
-}
-
-body.alto-contraste button,
-body.alto-contraste input,
-body.alto-contraste select,
-body.alto-contraste textarea {
-  background-color: #111 !important;
-  color: #fff !important;
-  border: 1px solid #fff !important;
-}
-
-/* ======= AJUSTES MOBILE ======= */
-@media (max-width: 768px) {
-  .cards {
-    display: flex;
-    flex-direction: column;
     align-items: center;
   }
 
@@ -333,12 +293,10 @@ body.alto-contraste textarea {
     margin-bottom: 10px;
   }
 
-  /* Corrige alinhamento do botão no mobile */
+  /* Ajustes mobile para botão contraste */
   .contraste-btn {
     bottom: 15px;
     right: 15px;
     padding: 8px 14px;
   }
 }
-
-
