@@ -88,19 +88,20 @@ ong-frontend-final/
 ├─ cadastro.html       # Cadastro de voluntários/doadores
 │
 ├─ css/
-│   └─ style.css       # Arquivo de estilos principal (Atividade IV)
+│   └─ style.css       # Arquivo de estilos principal
 │
-├─ js/                  # Scripts JavaScript
+├─ js/                 # Scripts JavaScript
 │   ├─ menu.js           # Menu responsivo
 │   ├─ validacaoForm.js  # Validação do formulário
-│   └─ renderProjetos.js # Renderização dinâmica de projetos
+│   ├─ renderProjetos.js # Renderização dinâmica de projetos
+│   └─ contraste.js      # Botão de alto contraste
 │
-├─ img/                 # Imagens da ONG
+├─ img/                # Imagens da ONG
 │   ├─ crianca-feliz.jpg
 │   ├─ maos-solidarias.jpg
 │   └─ ong-fachada.jpg
 │
-└─ README.md            # Documentação do projeto
+└─ README.md           # Documentação do projeto
 ```
 
 ---
