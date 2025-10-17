@@ -1,22 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const btnContraste = document.querySelector('.contraste-btn');
+    const btn = document.querySelector('.contraste-btn');
 
-    if (!btnContraste) return;
+    if (!btn) return;
 
-    const toggleContraste = () => {
+    // Aplica contraste se já estiver salvo
+    if (localStorage.getItem('altoContraste') === 'true') {
+        document.body.classList.add('alto-contraste');
+    }
+
+    btn.addEventListener('click', () => {
         document.body.classList.toggle('alto-contraste');
 
+        // Salva a preferência
         if (document.body.classList.contains('alto-contraste')) {
             localStorage.setItem('altoContraste', 'true');
         } else {
             localStorage.setItem('altoContraste', 'false');
         }
-    };
-
-    btnContraste.addEventListener('click', toggleContraste);
-
-    const preferencia = localStorage.getItem('altoContraste');
-    if (preferencia === 'true') {
-        document.body.classList.add('alto-contraste');
-    }
+    });
 });
