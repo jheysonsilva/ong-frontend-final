@@ -8,14 +8,14 @@ document.addEventListener('DOMContentLoaded', () => {
     { titulo: 'Alimente o Futuro', descricao: 'Campanha de arrecadação de alimentos para famílias necessitadas.', imagem: 'img/ong-fachada.jpg' }
   ];
 
-  projetos.forEach(p => {
+  projetos.forEach(projeto => {
     const card = document.createElement('div');
-    card.className = 'card';
+    card.classList.add('card');
     card.innerHTML = `
-      <img src="${p.imagem}" alt="${p.titulo}">
+      <img src="${projeto.imagem}" alt="${projeto.titulo}">
       <div class="card-content">
-        <h3>${p.titulo}</h3>
-        <p>${p.descricao}</p>
+        <h3>${projeto.titulo}</h3>
+        <p>${projeto.descricao}</p>
       </div>
     `;
     container.appendChild(card);
