@@ -118,7 +118,7 @@ img {
   border-radius: 10px;
 }
 
-/* Ajuste da imagem inicial */
+/* Ajuste específico da imagem inicial */
 #inicio img, .fachada {
   max-width: 700px;
   width: 100%;
@@ -208,12 +208,6 @@ legend {
   color: #005f73;
 }
 
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-}
-
 label {
   font-weight: 600;
   text-align: left;
@@ -258,60 +252,44 @@ footer {
   border-radius: 0 0 10px 10px;
 }
 
-/* ======= Modo Escuro ======= */
-body.modo-escuro {
-  background-color: #121212;
-  color: #e0e0e0;
-}
-
-body.modo-escuro header,
-body.modo-escuro footer {
-  background-color: #1b1b1b;
-  color: #fff;
-}
-
-body.modo-escuro a,
-body.modo-escuro button {
-  background-color: #0a9396;
-  color: #fff;
-}
-
 /* ======= Alto Contraste ======= */
 body.alto-contraste {
-  background-color: #000;
-  color: #fff;
+  background-color: #000 !important;
+  color: #fff !important;
 }
 
 body.alto-contraste header,
 body.alto-contraste footer {
-  background-color: #000;
-  color: #fff;
-}
-
-body.alto-contraste a,
-body.alto-contraste button {
-  background-color: #fff;
-  color: #000;
-  border: 2px solid #fff;
+  background-color: #000 !important;
+  color: #fff !important;
 }
 
 body.alto-contraste main,
 body.alto-contraste section,
 body.alto-contraste form,
 body.alto-contraste fieldset {
-  background-color: #000;
-  color: #fff;
-  border-color: #fff;
+  background-color: #000 !important;
+  color: #fff !important;
+  border-color: #fff !important;
 }
 
-body.alto-contraste input {
-  background-color: #000;
-  color: #fff;
-  border: 2px solid #fff;
+body.alto-contraste input,
+body.alto-contraste textarea,
+body.alto-contraste select {
+  background-color: #000 !important;
+  color: #fff !important;
+  border: 2px solid #fff !important;
+}
+
+body.alto-contraste a,
+body.alto-contraste button {
+  background-color: #fff !important;
+  color: #000 !important;
+  border: 2px solid #fff !important;
 }
 
 body.alto-contraste h2 {
-  color: #ffd166;
+  color: #ffd166 !important;
 }
 
 /* ======= Responsividade ======= */
