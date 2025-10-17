@@ -1,22 +1,43 @@
-// acessibilidade.js - controle de contraste e modo escuro
+// js/acessibilidade.js
+document.addEventListener('DOMContentLoaded', () => {
+  const btnContraste = document.getElementById('toggle-contrast');
+  const btnDark = document.getElementById('toggle-darkmode');
+  const body = document.body;
 
-document.addEventListener("DOMContentLoaded", () => {
-  const contrasteBtn = document.getElementById("toggle-contrast");
-  const darkModeBtn = document.getElementById("toggle-darkmode");
+  // helpers: sincronizar aria-pressed
+  function setPressed(button, ativo){
+    if (!button) return;
+    button.setAttribute('aria-pressed', ativo ? 'true' : 'false');
+  }
 
-  if (contrasteBtn) {
-    contrasteBtn.addEventListener("click", () => {
-      document.body.classList.toggle("alto-contraste");
-      const ativo = document.body.classList.contains("alto-contraste");
-      contrasteBtn.setAttribute("aria-pressed", ativo);
+  if (btnContraste) {
+    btnContraste.addEventListener('click', () => {
+      const ativo = body.classList.toggle('alto-contraste');
+      setPressed(btnContraste, ativo);
+      // se ativou alto-contraste, desativa modo-escuro para evitar conflito visual
+      if (ativo && body.classList.contains('modo-escuro')) {
+        body.classList.remove('modo-escuro');
+        setPressed(btnDark, false);
+      }
     });
   }
 
-  if (darkModeBtn) {
-    darkModeBtn.addEventListener("click", () => {
-      document.body.classList.toggle("modo-escuro");
-      const ativo = document.body.classList.contains("modo-escuro");
-      darkModeBtn.setAttribute("aria-pressed", ativo);
+  if (btnDark) {
+    btnDark.addEventListener('click', () => {
+      const ativo = body.classList.toggle('modo-escuro');
+      setPressed(btnDark, ativo);
+      if (ativo && body.classList.contains('alto-contraste')) {
+        body.classList.remove('alto-contraste');
+        setPressed(btnContraste, false);
+      }
     });
   }
+
+  // permitir alternância via teclado Enter/Space nos botões (eles são botões nativos, mas reforço)
+  [btnContraste, btnDark].forEach(btn => {
+    if (!btn) return;
+    btn.addEventListener('keyup', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') btn.click();
+    });
+  });
 });
