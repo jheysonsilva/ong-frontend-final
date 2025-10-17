@@ -1,40 +1,30 @@
-
 document.addEventListener("DOMContentLoaded", () => {
-  // Criar botões de acessibilidade dinamicamente
-  const btnContainer = document.createElement("div");
-  btnContainer.style.position = "fixed";
-  btnContainer.style.bottom = "20px";
-  btnContainer.style.right = "20px";
-  btnContainer.style.display = "flex";
-  btnContainer.style.flexDirection = "column";
-  btnContainer.style.gap = "10px";
-  btnContainer.style.zIndex = "1000";
-
   const btnEscuro = document.createElement("button");
   btnEscuro.textContent = "Modo Escuro";
-  btnEscuro.setAttribute("aria-label", "Ativar modo escuro");
+  btnEscuro.style.position = "fixed";
+  btnEscuro.style.bottom = "60px";
+  btnEscuro.style.right = "20px";
+  btnEscuro.style.zIndex = "1000";
 
   const btnContraste = document.createElement("button");
   btnContraste.textContent = "Alto Contraste";
-  btnContraste.setAttribute("aria-label", "Ativar alto contraste");
+  btnContraste.style.position = "fixed";
+  btnContraste.style.bottom = "20px";
+  btnContraste.style.right = "20px";
+  btnContraste.style.zIndex = "1000";
 
-  btnContainer.appendChild(btnEscuro);
-  btnContainer.appendChild(btnContraste);
-  document.body.appendChild(btnContainer);
+  document.body.appendChild(btnEscuro);
+  document.body.appendChild(btnContraste);
 
-  // Função modo escuro
   btnEscuro.addEventListener("click", () => {
     document.body.classList.toggle("modo-escuro");
-    // Remove alto contraste se estiver ativo
     if (document.body.classList.contains("modo-escuro")) {
       document.body.classList.remove("alto-contraste");
     }
   });
 
-  // Função alto contraste
   btnContraste.addEventListener("click", () => {
     document.body.classList.toggle("alto-contraste");
-    // Remove modo escuro se estiver ativo
     if (document.body.classList.contains("alto-contraste")) {
       document.body.classList.remove("modo-escuro");
     }
