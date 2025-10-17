@@ -20,60 +20,62 @@ body {
 header {
   background-color: #005f73;
   color: #fff;
-  padding: 1rem 2rem;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
+  padding: 1rem 0;
 }
 
 header h1 {
   font-size: 1.8rem;
   text-align: center;
+  margin-bottom: 0.5rem;
 }
 
+/* Menu */
 .menu-btn {
   font-size: 1.8rem;
   background: none;
   border: none;
   color: #fff;
   cursor: pointer;
+  margin-bottom: 0.5rem;
 }
 
-.menu {
+nav ul.menu {
   list-style: none;
   display: flex;
   gap: 1.5rem;
   justify-content: center;
 }
 
-.menu li a {
+nav ul.menu li a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
 }
 
-.menu li a:hover,
-.menu li a:focus {
+nav ul.menu li a:hover,
+nav ul.menu li a:focus {
   color: #ffd166;
   outline: 2px solid #ffd166;
   outline-offset: 2px;
 }
 
-/* ======= Responsividade do Menu ======= */
+/* Menu responsivo */
 @media (max-width: 768px) {
-  .menu {
+  nav ul.menu {
     flex-direction: column;
+    display: none;
+    width: 200px;
+    background-color: #005f73;
+    padding: 1rem;
     position: absolute;
     top: 60px;
-    right: 0;
-    background-color: #005f73;
-    width: 200px;
-    padding: 1rem;
-    display: none;
   }
 
-  .menu.mostrar {
+  nav ul.menu.mostrar {
     display: flex;
   }
 }
@@ -116,10 +118,11 @@ img {
   border-radius: 10px;
 }
 
-/* Página inicial: limitar altura da imagem da ONG */
-section img[src*="ong-fachada"] {
-  max-height: 400px;
-  object-fit: cover;
+/* Ajuste específico da imagem inicial */
+#inicio img, .fachada {
+  max-width: 700px;
+  width: 100%;
+  height: auto;
 }
 
 /* ======= Cards de Projetos ======= */
@@ -127,6 +130,7 @@ section img[src*="ong-fachada"] {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
+  justify-items: center;
 }
 
 .card {
@@ -135,6 +139,8 @@ section img[src*="ong-fachada"] {
   padding: 1rem;
   box-shadow: 0 1px 4px rgba(0,0,0,0.1);
   transition: transform 0.2s;
+  width: 100%;
+  max-width: 300px;
   text-align: center;
 }
 
@@ -144,11 +150,11 @@ section img[src*="ong-fachada"] {
 }
 
 .card img {
-  border-radius: 10px;
-  margin-bottom: 0.8rem;
   width: 100%;
   height: 200px;
   object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 0.8rem;
 }
 
 /* ======= Botões ======= */
@@ -174,7 +180,7 @@ button:focus {
   outline-offset: 2px;
 }
 
-/* ======= Formulário (Cadastro) ======= */
+/* ======= Formulário ======= */
 form {
   display: flex;
   flex-direction: column;
@@ -186,6 +192,26 @@ form {
   width: 100%;
   max-width: 500px;
   margin: 0 auto;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+legend {
+  font-weight: bold;
+  color: #005f73;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
 }
 
 label {
@@ -232,7 +258,7 @@ footer {
   border-radius: 0 0 10px 10px;
 }
 
-/* ======= Contraste e acessibilidade ======= */
+/* ======= Alto Contraste ======= */
 body.alto-contraste {
   background-color: #000;
   color: #fff;
@@ -251,6 +277,26 @@ body.alto-contraste button {
   border: 2px solid #fff;
 }
 
+body.alto-contraste main,
+body.alto-contraste section,
+body.alto-contraste form,
+body.alto-contraste fieldset {
+  background-color: #000;
+  color: #fff;
+  border-color: #fff;
+}
+
+body.alto-contraste input {
+  background-color: #000;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+body.alto-contraste h2 {
+  color: #ffd166;
+}
+
+/* ======= Modo Escuro ======= */
 body.modo-escuro {
   background-color: #121212;
   color: #e0e0e0;
@@ -273,7 +319,6 @@ body.modo-escuro button {
   main {
     padding: 1rem;
   }
-
   .cards {
     gap: 1rem;
   }
