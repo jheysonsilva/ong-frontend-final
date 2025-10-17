@@ -9,7 +9,7 @@
 </head>
 <body>
   <header>
-    <h1>Cadastro de Voluntário</h1>
+    <h1>Cadastro de Voluntário ou Doador</h1>
     <button class="menu-btn" aria-label="Abrir menu" aria-expanded="false">☰</button>
     <nav>
       <ul class="menu">
@@ -29,6 +29,9 @@
 
         <label for="email">E-mail:</label>
         <input id="email" name="email" type="email" required>
+
+        <label for="cpf">CPF:</label>
+        <input id="cpf" name="cpf" type="text" pattern="\d{11}" title="Digite 11 números" required>
 
         <label for="telefone">Telefone:</label>
         <input id="telefone" name="telefone" type="tel" required>
