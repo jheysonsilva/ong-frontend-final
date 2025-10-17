@@ -182,7 +182,7 @@ input {
   border-radius: 5px;
 }
 
-button {
+button[type="submit"] {
   margin-top: 1.2rem;
   width: 100%;
   background-color: #0a9396;
@@ -213,22 +213,16 @@ footer {
   border-radius: 6px;
   cursor: pointer;
   z-index: 1000;
-  box-shadow: 0px 2px 5px rgba(0,0,0,0.3);
-  transition: all 0.3s ease;
 }
 
 .contraste-btn:hover {
   background-color: #555;
 }
 
-/* ======= Modo de Alto Contraste ======= */
+/* ======= Modo Alto Contraste ======= */
 body.alto-contraste {
   background-color: #000 !important;
   color: #fff !important;
-}
-
-body.alto-contraste a {
-  color: yellow !important;
 }
 
 body.alto-contraste header,
@@ -247,7 +241,10 @@ body.alto-contraste form {
   border-color: #fff !important;
 }
 
-/* ======= Inputs e botões em contraste ======= */
+body.alto-contraste a {
+  color: yellow !important;
+}
+
 body.alto-contraste button,
 body.alto-contraste input,
 body.alto-contraste select,
@@ -274,7 +271,6 @@ body.alto-contraste textarea {
 
   .cards {
     flex-direction: column;
-    gap: 1rem;
     align-items: center;
   }
 
@@ -293,10 +289,10 @@ body.alto-contraste textarea {
     margin-bottom: 10px;
   }
 
-  /* Ajustes mobile para botão contraste */
+  /* Ajusta posição do botão contraste no mobile */
   .contraste-btn {
-    bottom: 15px;
-    right: 15px;
-    padding: 8px 14px;
+    top: 10px;
+    right: 10px;
+    padding: 8px 12px;
   }
 }
