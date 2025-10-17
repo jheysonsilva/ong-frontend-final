@@ -1,35 +1,22 @@
-// renderProjetos.js - renderiza os cards de projetos sociais dinamicamente
-
-document.addEventListener("DOMContentLoaded", () => {
-  const container = document.querySelector(".cards");
+// js/renderProjetos.js - renderiza cards de projeto
+document.addEventListener('DOMContentLoaded', () => {
+  const container = document.querySelector('.cards');
   if (!container) return;
 
   const projetos = [
-    {
-      nome: "Ação Solidária de Inverno",
-      descricao: "Campanha anual de arrecadação de agasalhos e cobertores para famílias em situação de vulnerabilidade.",
-      imagem: "img/agasalho.jpg"
-    },
-    {
-      nome: "Doe Alimentos",
-      descricao: "Arrecadação e distribuição de cestas básicas em comunidades carentes.",
-      imagem: "img/doacao-alimentos.jpg"
-    },
-    {
-      nome: "Educação para Todos",
-      descricao: "Projeto de reforço escolar gratuito para crianças de baixa renda.",
-      imagem: "img/educacao.jpg"
-    }
+    { titulo: 'Mãos Solidárias', descricao: 'Capacitação de mulheres em situação de vulnerabilidade social.', imagem: 'img/maos-solidarias.jpg' },
+    { titulo: 'Criança Feliz', descricao: 'Atividades educativas e recreativas para crianças carentes.', imagem: 'img/crianca-feliz.jpg' },
+    { titulo: 'Alimente o Futuro', descricao: 'Campanha de arrecadação de alimentos para famílias necessitadas.', imagem: 'img/ong-fachada.jpg' }
   ];
 
-  projetos.forEach(projeto => {
-    const card = document.createElement("article");
-    card.classList.add("card");
-    card.setAttribute("tabindex", "0");
+  projetos.forEach(p => {
+    const card = document.createElement('article');
+    card.className = 'card';
+    card.tabIndex = 0;
     card.innerHTML = `
-      <img src="${projeto.imagem}" alt="Imagem ilustrativa do projeto ${projeto.nome}">
-      <h3>${projeto.nome}</h3>
-      <p>${projeto.descricao}</p>
+      <img src="${p.imagem}" alt="${p.titulo}">
+      <h3>${p.titulo}</h3>
+      <p>${p.descricao}</p>
     `;
     container.appendChild(card);
   });
