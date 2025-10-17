@@ -118,7 +118,7 @@ img {
   border-radius: 10px;
 }
 
-/* Ajuste específico da imagem inicial */
+/* Ajuste da imagem inicial */
 #inicio img, .fachada {
   max-width: 700px;
   width: 100%;
@@ -258,6 +258,24 @@ footer {
   border-radius: 0 0 10px 10px;
 }
 
+/* ======= Modo Escuro ======= */
+body.modo-escuro {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.modo-escuro header,
+body.modo-escuro footer {
+  background-color: #1b1b1b;
+  color: #fff;
+}
+
+body.modo-escuro a,
+body.modo-escuro button {
+  background-color: #0a9396;
+  color: #fff;
+}
+
 /* ======= Alto Contraste ======= */
 body.alto-contraste {
   background-color: #000;
@@ -294,24 +312,6 @@ body.alto-contraste input {
 
 body.alto-contraste h2 {
   color: #ffd166;
-}
-
-/* ======= Modo Escuro ======= */
-body.modo-escuro {
-  background-color: #121212;
-  color: #e0e0e0;
-}
-
-body.modo-escuro header,
-body.modo-escuro footer {
-  background-color: #1b1b1b;
-  color: #fff;
-}
-
-body.modo-escuro a,
-body.modo-escuro button {
-  background-color: #0a9396;
-  color: #fff;
 }
 
 /* ======= Responsividade ======= */
