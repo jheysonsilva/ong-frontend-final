@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     form.addEventListener('submit', (e) => {
         e.preventDefault();
-
         const nome = document.getElementById('nome')?.value.trim();
         const email = document.getElementById('email')?.value.trim();
         const cpf = document.getElementById('cpf')?.value.trim();
