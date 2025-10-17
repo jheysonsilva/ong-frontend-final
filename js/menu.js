@@ -6,12 +6,5 @@ document.addEventListener('DOMContentLoaded', () => {
     btnMenu.addEventListener('click', () => {
       navMenu.classList.toggle('mostrar');
     });
-
-    btnMenu.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        navMenu.classList.toggle('mostrar');
-      }
-    });
   }
 });
