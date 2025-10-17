@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Plataforma digital para ONGs - Conecte doadores e voluntários.">
-  <meta name="theme-color" content="#005f73">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Plataforma digital para ONGs - Conecte doadores e voluntários."/>
+  <meta name="theme-color" content="#005f73"/>
   <title>ONG Esperança Viva</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <header role="banner">
-    <h1>ONG Esperança Viva</h1>
-    <button class="menu-btn" aria-label="Abrir menu de navegação">☰</button>
-    <nav role="navigation" aria-label="Menu principal">
-      <ul>
-        <li><a href="index.html" role="link">Início</a></li>
-        <li><a href="projetos.html" role="link">Projetos</a></li>
-        <li><a href="cadastro.html" role="link">Cadastro</a></li>
-      </ul>
-    </nav>
+    <div class="header-inner">
+      <h1>ONG Esperança Viva</h1>
+      <button class="menu-btn" aria-label="Abrir menu de navegação" aria-expanded="false">☰</button>
+      <nav role="navigation" aria-label="Menu principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <div class="acessibilidade">
-    <button id="toggle-contrast" aria-label="Ativar alto contraste">Alto Contraste</button>
-    <button id="toggle-darkmode" aria-label="Ativar modo escuro">Modo Escuro</button>
+    <button id="toggle-contrast" aria-pressed="false" aria-label="Ativar alto contraste">Alto Contraste</button>
+    <button id="toggle-darkmode" aria-pressed="false" aria-label="Ativar modo escuro">Modo Escuro</button>
   </div>
 
   <main role="main">
@@ -36,8 +38,8 @@
       <img src="img/ong-fachada.jpg" alt="Foto da sede da ONG Esperança Viva">
     </section>
 
-    <section aria-labelledby="missao-visao-valores">
-      <h2 id="missao-visao-valores">Missão, Visão e Valores</h2>
+    <section aria-labelledby="missao-visao">
+      <h2 id="missao-visao">Missão, Visão e Valores</h2>
       <ul>
         <li><strong>Missão:</strong> Promover o bem-estar social e o desenvolvimento humano.</li>
         <li><strong>Visão:</strong> Ser referência em solidariedade e transformação social.</li>
@@ -59,7 +61,7 @@
     <p>&copy; 2025 ONG Esperança Viva - Todos os direitos reservados.</p>
   </footer>
 
-  <!-- Scripts -->
+  <!-- Scripts (ordem importante) -->
   <script src="js/menu.js"></script>
   <script src="js/acessibilidade.js"></script>
 </body>
