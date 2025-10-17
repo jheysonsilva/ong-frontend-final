@@ -1,203 +1,207 @@
 /* ======= Estilo Geral ======= */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
 }
 body {
-  background-color: #f7f9fb;
-  color: #333;
-  line-height: 1.6;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+    background-color: #f7f9fb;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* ======= Cabeçalho ======= */
 header {
-  background-color: #005f73;
-  color: #fff;
-  text-align: center;
-  padding: 1.5rem 0;
+    background-color: #005f73;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
 }
 header h1 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
 }
 nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
 }
 nav a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: bold;
-  transition: color 0.3s ease;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 nav a:hover {
-  color: #ffd166;
+    color: #ffd166;
 }
 
 /* ======= Seções ======= */
 main {
-  flex: 1;
-  padding: 2rem;
-  max-width: 900px;
-  margin: 0 auto;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    padding: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 section {
-  margin-bottom: 2.5rem;
-  text-align: center;
+    margin-bottom: 2.5rem;
+    text-align: center;
 }
 h2 {
-  color: #005f73;
-  margin-bottom: 1rem;
-  border-bottom: 2px solid #0a9396;
-  padding-bottom: 0.5rem;
+    color: #005f73;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #0a9396;
+    padding-bottom: 0.5rem;
 }
 .mvvs {
-  list-style: none;
-  padding-left: 0;
+    list-style: none;
+    padding-left: 0;
 }
 
 /* ======= Imagens ======= */
 img {
-  max-width: 80%;
-  height: auto;
-  display: block;
-  margin: 1rem auto;
-  border-radius: 10px;
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+    border-radius: 10px;
 }
 
 /* ======= Botões e Links ======= */
 a, button {
-  display: inline-block;
-  background-color: #0a9396;
-  color: white;
-  text-decoration: none;
-  padding: 0.8rem 1.2rem;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-  margin-top: 1rem;
+    display: inline-block;
+    background-color: #0a9396;
+    color: white;
+    text-decoration: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
 }
 a:hover, button:hover {
-  background-color: #005f73;
+    background-color: #005f73;
 }
 section a.btn {
-  display: block;
-  margin: 1rem auto;
+    display: block;
+    margin: 1rem auto;
 }
 
 /* ======= Projetos ======= */
 .cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
-  margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
 }
 .cards .card {
-  background-color: #f1f1f1;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  overflow: hidden;
-  width: 250px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    overflow: hidden;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .cards .card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
 }
 .cards .card-content {
-  padding: 1rem;
-  text-align: center;
+    padding: 1rem;
+    text-align: center;
 }
 .cards .card-content h3 {
-  color: #005f73;
-  margin-bottom: 0.5rem;
+    color: #005f73;
+    margin-bottom: 0.5rem;
 }
 .cards .card-content p {
-  color: #333;
-  font-size: 0.9rem;
+    color: #333;
+    font-size: 0.9rem;
 }
 
 /* ======= Formulário ======= */
 form {
-  background-color: #f1f1f1;
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    background-color: #f1f1f1;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 fieldset {
-  border: 1px solid #ccc;
-  padding: 1rem;
-  border-radius: 8px;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 8px;
 }
 legend {
-  font-weight: bold;
-  color: #005f73;
+    font-weight: bold;
+    color: #005f73;
 }
 label {
-  display: block;
-  margin-top: 1rem;
-  font-weight: 600;
+    display: block;
+    margin-top: 1rem;
+    font-weight: 600;
 }
 input {
-  width: 100%;
-  padding: 0.6rem;
-  margin-top: 0.3rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+    width: 100%;
+    padding: 0.6rem;
+    margin-top: 0.3rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 button[type="submit"] {
-  margin-top: 1.2rem;
-  width: 100%;
-  background-color: #0a9396;
-  border: none;
-  cursor: pointer;
-  font-size: 1rem;
+    margin-top: 1.2rem;
+    width: 100%;
+    background-color: #0a9396;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
 }
 
 /* ======= Rodapé ======= */
 footer {
-  background-color: #005f73;
-  color: #fff;
-  text-align: center;
-  padding: 1rem 0;
-  margin-top: auto;
-  font-size: 0.9rem;
+    background-color: #005f73;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: auto;
+    font-size: 0.9rem;
 }
 
 /* ======= BOTÃO DE ALTO CONTRASTE ======= */
 .contraste-btn {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  padding: 8px 12px;
-  background-color: #333;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  z-index: 1000;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 8px 12px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    z-index: 1000;
 }
-.contraste-btn:hover { background-color: #555; }
+.contraste-btn:hover {
+    background-color: #555;
+}
 
 /* ======= MODO DE ALTO CONTRASTE ======= */
 body.alto-contraste {
-  background-color: #000 !important;
-  color: #fff !important;
+    background-color: #000 !important;
+    color: #fff !important;
 }
-body.alto-contraste a { color: yellow !important; }
+body.alto-contraste a {
+    color: yellow !important;
+}
 body.alto-contraste header,
 body.alto-contraste footer,
 body.alto-contraste section,
@@ -209,24 +213,42 @@ body.alto-contraste h2,
 body.alto-contraste h3,
 body.alto-contraste .card,
 body.alto-contraste form {
-  background-color: #000 !important;
-  color: #fff !important;
-  border-color: #fff !important;
+    background-color: #000 !important;
+    color: #fff !important;
+    border-color: #fff !important;
 }
 
 /* ======= Responsividade ======= */
 @media (max-width: 768px) {
-  nav ul { flex-direction: column; gap: 1rem; }
-  main { padding: 1rem; }
-  img { max-width: 95%; }
-  .cards { flex-direction: column; gap: 1rem; align-items: center; }
-  .card img { 
-    width: 90%; 
-    height: auto; 
-    /* CORREÇÃO: Centraliza a imagem do projeto no mobile */
-    margin: 0.5rem auto; 
-  }
-  form label, form input { width: 100%; }
-  form input { margin-top: 5px; margin-bottom: 10px; }
-  .contraste-btn { bottom: 15px; right: 15px; }
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    main {
+        padding: 1rem;
+    }
+    img {
+        max-width: 95%;
+    }
+    .cards {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+    .card img {
+        width: 90%;
+        height: auto;
+    }
+    form label, form input {
+        width: 100%;
+    }
+    form input {
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+    .contraste-btn {
+        bottom: 15px;
+        right: 15px;
+        top: auto;
+    }
 }
