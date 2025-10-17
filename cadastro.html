@@ -1,35 +1,37 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Cadastro de voluntários e doadores - ONG Esperança Viva">
-  <meta name="theme-color" content="#005f73">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Cadastro de voluntários e doadores - ONG Esperança Viva"/>
+  <meta name="theme-color" content="#005f73"/>
   <title>Cadastro | ONG Esperança Viva</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <header role="banner">
-    <h1>Cadastro de Voluntário ou Doador</h1>
-    <button class="menu-btn" aria-label="Abrir menu de navegação">☰</button>
-    <nav role="navigation" aria-label="Menu principal">
-      <ul>
-        <li><a href="index.html" role="link">Início</a></li>
-        <li><a href="projetos.html" role="link">Projetos</a></li>
-        <li><a href="cadastro.html" role="link">Cadastro</a></li>
-      </ul>
-    </nav>
+    <div class="header-inner">
+      <h1>Cadastro de Voluntário ou Doador</h1>
+      <button class="menu-btn" aria-label="Abrir menu de navegação" aria-expanded="false">☰</button>
+      <nav role="navigation" aria-label="Menu principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <div class="acessibilidade">
-    <button id="toggle-contrast" aria-label="Ativar alto contraste">Alto Contraste</button>
-    <button id="toggle-darkmode" aria-label="Ativar modo escuro">Modo Escuro</button>
+    <button id="toggle-contrast" aria-pressed="false" aria-label="Ativar alto contraste">Alto Contraste</button>
+    <button id="toggle-darkmode" aria-pressed="false" aria-label="Ativar modo escuro">Modo Escuro</button>
   </div>
 
   <main role="main">
     <section aria-labelledby="form-cadastro">
       <h2 id="form-cadastro">Preencha seus dados</h2>
-      <form aria-label="Formulário de cadastro de voluntário ou doador">
+      <form id="cadastroForm" aria-label="Formulário de cadastro de voluntário ou doador">
         <fieldset>
           <legend>Informações Pessoais</legend>
 
