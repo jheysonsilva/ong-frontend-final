@@ -1,320 +1,73 @@
-/* =========================================
-   ESTILOS GERAIS - ONG Esperança Viva
-   Entrega IV - Versionamento, Acessibilidade e Deploy
-   ========================================= */
+/* style.css - versão funcional e acessível */
 
-/* ---------- RESET ---------- */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: Arial, Helvetica, sans-serif; background:#f8f9fa; color:#222; line-height:1.6; transition: background 200ms, color 200ms; }
+
+/* header */
+.header-inner { max-width:1100px; margin:0 auto; padding:1rem; display:flex; align-items:center; justify-content:space-between; gap:1rem; }
+header { background:#005f73; color:#fff; }
+header h1 { font-size:1.4rem; }
+nav ul { list-style:none; display:flex; gap:1rem; align-items:center; }
+nav a { color:#fff; text-decoration:none; font-weight:700; padding:0.3rem 0.6rem; border-radius:4px; }
+nav a:hover, nav a:focus { background:#0a9396; color:#fff; outline:none; }
+
+/* botao menu mobile */
+.menu-btn { display:none; background:none; border:none; color:#fff; font-size:1.4rem; cursor:pointer; }
+@media (max-width:768px){
+  .menu-btn { display:inline-block; }
+  nav ul { display:none; position:absolute; top:60px; left:0; right:0; flex-direction:column; background:#0a9396; padding:1rem; }
+  nav ul.ativo { display:flex; }
 }
 
-html {
-  scroll-behavior: smooth;
+/* acessibilidade buttons */
+.acessibilidade { display:flex; justify-content:center; gap:0.5rem; padding:0.8rem 0; }
+.acessibilidade button { background:#ffd166; color:#000; border:none; padding:0.45rem 0.8rem; border-radius:6px; cursor:pointer; font-weight:700; }
+
+/* main / sections */
+main { max-width:1100px; margin:1.2rem auto; padding:1rem; background:#fff; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.06); }
+h2 { color:#005f73; text-align:center; margin-bottom:0.6rem; }
+p { margin-bottom:0.8rem; text-align:justify; }
+
+/* cards */
+.cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1rem; margin-top:1rem; }
+.card { background:#fff; border-radius:8px; padding:1rem; box-shadow:0 1px 6px rgba(0,0,0,0.06); transition: transform 150ms; }
+.card:focus, .card:hover { transform:translateY(-4px); outline:none; }
+.card img { width:100%; height:auto; border-radius:6px; margin-bottom:0.6rem; }
+
+/* form */
+form { max-width:640px; margin:0 auto; background:#f4f6f7; padding:1.2rem; border-radius:8px; }
+label { display:block; margin-bottom:0.25rem; font-weight:700; color:#005f73; }
+input, textarea, select { width:100%; padding:0.6rem; border-radius:6px; border:1px solid #cfcfcf; margin-bottom:0.8rem; }
+button[type="submit"] { background:#0a9396; color:#fff; border:none; padding:0.8rem; width:100%; border-radius:6px; cursor:pointer; font-weight:700; }
+button[type="submit"]:hover, button[type="submit"]:focus { background:#005f73; }
+
+/* footer */
+footer { background:#005f73; color:#fff; padding:0.8rem; text-align:center; margin-top:1rem; }
+
+/* Modo escuro */
+.modo-escuro { background:#121212; color:#f1f1f1; }
+.modo-escuro main { background:#1b1b1b; box-shadow:none; }
+.modo-escuro header { background:#0f3b3b; }
+.modo-escuro nav ul { background:#0f3b3b; }
+.modo-escuro a { color:#cceeff; }
+.modo-escuro .acessibilidade button { background:#ffd166; color:#000; }
+
+/* Alto contraste */
+.alto-contraste { background:#000 !important; color:#fff !important; }
+.alto-contraste header, .alto-contraste nav, .alto-contraste footer { background:#000 !important; color:#fff !important; }
+.alto-contraste a, .alto-contraste h1, .alto-contraste h2, .alto-contraste label { color:#fff !important; }
+.alto-contraste .acessibilidade button { background:#fff !important; color:#000 !important; }
+
+/* foco por teclado (WCAG) */
+a:focus, button:focus, input:focus, select:focus, textarea:focus, .card:focus {
+  outline:3px solid #ffd166; outline-offset:3px;
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #f8f9fa;
-  color: #222;
-  line-height: 1.6;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* ---------- CABEÇALHO ---------- */
-header {
-  background-color: #005f73;
-  color: #fff;
-  padding: 1rem 0;
-  text-align: center;
-}
-
-header h1 {
-  font-size: 2rem;
-  margin-bottom: 0.3rem;
-}
-
-header p {
-  font-size: 1rem;
-}
-
-/* ---------- MENU DE NAVEGAÇÃO ---------- */
-nav {
-  background-color: #0a9396;
-  padding: 0.8rem;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-nav ul li {
-  margin: 0 1rem;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.2s;
-}
-
-nav a:hover,
-nav a:focus {
-  color: #ffd166;
-}
-
-/* ---------- BOTÃO MENU MOBILE ---------- */
-.menu-btn {
-  display: none;
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 1.6rem;
-  cursor: pointer;
-}
-
-@media (max-width: 768px) {
-  .menu-btn {
-    display: block;
-    margin: 0 auto;
-  }
-
-  nav ul {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav ul.ativo {
-    display: flex;
-  }
-}
-
-/* ---------- SEÇÕES PRINCIPAIS ---------- */
-main {
-  padding: 2rem;
-}
-
-section {
-  margin-bottom: 2rem;
-}
-
-h2 {
-  color: #005f73;
-  margin-bottom: 1rem;
-  text-align: center;
-}
-
-p {
-  text-align: justify;
-}
-
-/* ---------- CARDS DE PROJETOS ---------- */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1.5rem;
-}
-
-.card {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  padding: 1rem;
-  transition: transform 0.2s;
-}
-
-.card:hover,
-.card:focus {
-  transform: translateY(-5px);
-}
-
-.card img {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 0.8rem;
-}
-
-.card h3 {
-  color: #0a9396;
-  margin-bottom: 0.5rem;
-}
-
-/* ---------- FORMULÁRIOS ---------- */
-form {
-  max-width: 500px;
-  margin: 0 auto;
-  background: #fff;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-form label {
-  display: block;
-  margin-bottom: 0.3rem;
-  font-weight: bold;
-  color: #005f73;
-}
-
-form input,
-form select,
-form textarea {
-  width: 100%;
-  padding: 0.7rem;
-  margin-bottom: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-form button {
-  width: 100%;
-  padding: 0.8rem;
-  border: none;
-  background-color: #0a9396;
-  color: #fff;
-  font-weight: bold;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.2s;
-}
-
-form button:hover,
-form button:focus {
-  background-color: #005f73;
-}
-
-/* ---------- ACESSIBILIDADE: BOTÕES ---------- */
-.acessibilidade {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin: 1rem 0;
-}
-
-.acessibilidade button {
-  background-color: #ffd166;
-  color: #000;
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
-  padding: 0.6rem 1rem;
-  border-radius: 5px;
-  transition: 0.3s;
-}
-
-.acessibilidade button:hover,
-.acessibilidade button:focus {
-  background-color: #ffb703;
-}
-
-/* ---------- MODO ESCURO ---------- */
-.modo-escuro {
-  background-color: #121212;
-  color: #f1f1f1;
-}
-
-.modo-escuro header {
-  background-color: #1e1e1e;
-}
-
-.modo-escuro nav {
-  background-color: #333;
-}
-
-.modo-escuro a {
-  color: #90e0ef;
-}
-
-.modo-escuro a:hover {
-  color: #ffd166;
-}
-
-.modo-escuro .card {
-  background-color: #1e1e1e;
-  color: #f1f1f1;
-}
-
-.modo-escuro form {
-  background-color: #1e1e1e;
-}
-
-/* ---------- ALTO CONTRASTE ---------- */
-.alto-contraste {
-  background-color: #000 !important;
-  color: #fff !important;
-}
-
-.alto-contraste header,
-.alto-contraste nav,
-.alto-contraste footer {
-  background-color: #000 !important;
-  color: #fff !important;
-}
-
-.alto-contraste a,
-.alto-contraste h1,
-.alto-contraste h2,
-.alto-contraste h3,
-.alto-contraste label {
-  color: #fff !important;
-}
-
-.alto-contraste button {
-  background-color: #fff !important;
-  color: #000 !important;
-}
-
-/* ---------- FOCOS DE TECLADO ---------- */
-a:focus,
-button:focus,
-input:focus,
-select:focus,
-textarea:focus {
-  outline: 3px solid #ffd166;
-  outline-offset: 3px;
-}
-
-/* ---------- RODAPÉ ---------- */
-footer {
-  text-align: center;
-  background-color: #005f73;
-  color: #fff;
-  padding: 1rem;
-  font-size: 0.9rem;
-}
-
-footer a {
-  color: #ffd166;
-  text-decoration: none;
-}
-
-footer a:hover,
-footer a:focus {
-  text-decoration: underline;
-}
-
-/* ---------- RESPONSIVIDADE GERAL ---------- */
-@media (max-width: 480px) {
-  header h1 {
-    font-size: 1.5rem;
-  }
-
-  main {
-    padding: 1rem;
-  }
-
-  form {
-    padding: 1rem;
-  }
-
-  .acessibilidade {
-    flex-direction: column;
-  }
+/* responsividade */
+@media (max-width:480px){
+  .header-inner { flex-direction:column; align-items:stretch; gap:0.5rem; }
+  main { margin:0.8rem; padding:0.8rem; }
+  .acessibilidade { flex-direction:column; gap:0.4rem; padding:0.6rem; }
 }
