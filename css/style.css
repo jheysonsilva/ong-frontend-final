@@ -254,7 +254,7 @@ body.high-contrast button {
   }
 }
 
-/* ==== Botão de Alto Contraste ==== */
+/* ======= BOTÃO DE ALTO CONTRASTE ======= */
 .contraste-btn {
   position: fixed;
   bottom: 20px;
@@ -275,7 +275,7 @@ body.high-contrast button {
   background-color: #333;
 }
 
-/* ==== Estilo aplicado quando o contraste está ativo ==== */
+/* ======= MODO DE ALTO CONTRASTE ======= */
 body.alto-contraste {
   background-color: #000 !important;
   color: #fff !important;
@@ -284,11 +284,14 @@ body.alto-contraste {
 body.alto-contraste header,
 body.alto-contraste footer,
 body.alto-contraste section,
+body.alto-contraste main,
 body.alto-contraste div,
 body.alto-contraste p,
 body.alto-contraste h1,
 body.alto-contraste h2,
-body.alto-contraste h3 {
+body.alto-contraste h3,
+body.alto-contraste .card,
+body.alto-contraste form {
   background-color: #000 !important;
   color: #fff !important;
   border-color: #fff !important;
@@ -307,7 +310,7 @@ body.alto-contraste textarea {
   border: 1px solid #fff !important;
 }
 
-/* ==== Ajustes mobile ==== */
+/* ======= AJUSTES MOBILE ======= */
 @media (max-width: 768px) {
   .cards {
     display: flex;
@@ -329,5 +332,13 @@ body.alto-contraste textarea {
     margin-top: 5px;
     margin-bottom: 10px;
   }
+
+  /* Corrige alinhamento do botão no mobile */
+  .contraste-btn {
+    bottom: 15px;
+    right: 15px;
+    padding: 8px 14px;
+  }
 }
+
 
