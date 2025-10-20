@@ -138,3 +138,8 @@ ong-frontend-final/
 Desenvolvedor Back-End & Front-End em formação
 📚 Curso: *Análise e Desenvolvimento de Sistemas*
 🏫 Atividade IV — *Desenvolvimento Front-End para Web (HTML, CSS e JS)*
+
+# Organizar #
+
+# Merge da feature 'menu-acessivel' na branch develop realizado, evidenciando GitFlow.
+  #
