@@ -3,53 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="ONG Esperança Viva - Solidariedade e transformação social.">
+  <meta name="description" content="ONG Esperança Viva - Site oficial">
   <title>ONG Esperança Viva</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
+  <!-- Skip Link -->
+  <a class="skip-link" href="#main" style="position:absolute;left:-999px;top:auto;">Pular para o conteúdo</a>
+
+  <!-- Cabeçalho -->
   <header>
-    <h1>ONG Esperança Viva</h1>
-    <button class="menu-btn" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    <button class="menu-btn" aria-expanded="false" aria-controls="main-nav">Menu</button>
     <nav>
-      <ul class="menu">
+      <ul class="menu" id="main-nav">
         <li><a href="index.html">Início</a></li>
         <li><a href="projetos.html">Projetos</a></li>
         <li><a href="cadastro.html">Cadastro</a></li>
+        <li><a href="contato.html">Contato</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <section>
-      <h2>Quem Somos</h2>
-      <p>A ONG Esperança Viva atua desde 2010 com foco em inclusão social e apoio a famílias em vulnerabilidade.</p>
-      <img src="img/ong-fachada.jpg" alt="Foto da sede da ONG Esperança Viva.">
-    </section>
+  <!-- Conteúdo Principal -->
+  <main id="main">
+    <h1>Bem-vindo à ONG Esperança Viva</h1>
+    <p>Nosso objetivo é transformar vidas por meio de projetos sociais.</p>
 
+    <!-- Exemplo de formulário com mensagens de erro acessíveis -->
     <section>
-      <h2>Missão, Visão e Valores</h2>
-      <ul>
-        <li><strong>Missão:</strong> Promover o bem-estar e o desenvolvimento humano.</li>
-        <li><strong>Visão:</strong> Ser referência em solidariedade e transformação social.</li>
-        <li><strong>Valores:</strong> Empatia, compromisso e transparência.</li>
-      </ul>
-    </section>
+      <h2>Cadastro de Voluntários</h2>
+      <form id="form-cadastro">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
 
-    <section>
-      <h2>Contato</h2>
-      <address>
-        <p>Email: contato@ongesperancaviva.org.br</p>
-        <p>Telefone: (41) 99999-9999</p>
-        <p>Endereço: Rua da Esperança, 123 – Lapa/PR</p>
-      </address>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <button type="submit">Enviar</button>
+      </form>
     </section>
   </main>
 
+  <!-- Rodapé -->
   <footer>
-    <p>&copy; 2025 ONG Esperança Viva - Todos os direitos reservados.</p>
+    <p>© 2025 ONG Esperança Viva</p>
   </footer>
 
+  <!-- Scripts -->
   <script src="js/menu.js"></script>
   <script src="js/acessibilidade.js"></script>
 </body>
