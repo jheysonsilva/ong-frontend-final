@@ -88,7 +88,7 @@ ong-frontend-final/
 │   ├─ menu.js           # Menu responsivo e acessível
 │   ├─ validacaoForm.js  # Validação de formulário
 │   ├─ renderProjetos.js # Renderização dinâmica de projetos
-│   └─ contraste.js      # Botão de alto contraste
+│   └─ acessibilidade.js # Botão de alto contraste
 │
 ├─ img/                # Imagens da ONG
 │   ├─ crianca-feliz.jpg
